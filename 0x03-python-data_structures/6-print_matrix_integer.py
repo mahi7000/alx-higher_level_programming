@@ -7,7 +7,7 @@ def print_matrix_integer(matrix=[[]]):
                     endspace = ' '
                 else:
                     endspace = ''
-                print("{}".format(matrix[i][j]), end = endspace)
+                print("{:d}".format(matrix[i][j]), end = endspace)
             print()
     else:
         print()

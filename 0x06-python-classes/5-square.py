@@ -31,11 +31,11 @@ class Square:
         if (self.__size == 0):
             print()
         else:
-            i = 0;
+            i = 0
             while (i < self.__size):
-                j = 0;
+                j = 0
                 while (j < self.__size):
                     print("#", end='')
-                    j+=1
+                    j += 1
                 print()
-                i+=1
+                i += 1

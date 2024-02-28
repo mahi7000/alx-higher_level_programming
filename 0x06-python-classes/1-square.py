@@ -5,4 +5,4 @@
 class Square:
     """ class Square instance size """
     def __init__(self, __size):
-        pass
+        self.__size = __size

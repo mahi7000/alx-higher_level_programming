@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-# Write an empty class Square that defines a square
+python3 -c 'print(__import__("my_module").__doc__)'
+
 class Square:
-    """
-        an empty square class
-    """
+    python3 -c 'print(__import__("my_module").MyClass.__doc__)'
     pass

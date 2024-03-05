@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ adds 2 integers """
 
+
 def add_integer(a, b=98):
     """ Add function """
     if not isinstance(a, int) and not isinstance(a, float):

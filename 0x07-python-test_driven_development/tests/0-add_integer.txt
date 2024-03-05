@@ -1,0 +1,35 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> m = __import__("0-add_integer").__doc__
+>>> len(m) > 1
+True
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(2.1, 98)
+100
+
+>>> add_integer(1,)
+99
+
+>>> add_integer("hi", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(2, "hi")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(2, 3, 4)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given

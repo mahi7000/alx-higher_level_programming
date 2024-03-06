@@ -16,4 +16,5 @@ def print_square(size):
         else:
             square += "#" * size
 
-    print(square)
+    if size != 0:
+        print(square)

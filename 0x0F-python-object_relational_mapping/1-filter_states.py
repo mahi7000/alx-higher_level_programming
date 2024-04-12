@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+""" list states with name starting with N """
 import MySQLdb
 import sys
-""" list states with name starting with N """
 
 
 if __name__ == "__main__":

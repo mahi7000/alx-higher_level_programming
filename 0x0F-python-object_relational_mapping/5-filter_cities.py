@@ -22,8 +22,8 @@ if __name__ == "__main__":
 
     query = """
     SELECT cities.name
-    FROM states
-    RIGHT JOIN cities ON states.id = cities.state_id
+    FROM cities
+    LEFT JOIN states ON states.id = cities.state_id
     WHERE states.name = %s
     ORDER BY cities.id ASC
     """

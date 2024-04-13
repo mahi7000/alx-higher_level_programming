@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Add Louisiana """
+""" prints all cities """
+from model_city import City
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,10 +16,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = session.query(State).filter(State.id == 7).first()
+    for state, city in session.query(State, City).filter(
+            City.state_id == State.id).order_by(City.id).all():
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
-    session.delete(new_state)
-
-    session.commit()
-    print("suces")
     session.close()

@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ fetches url """
-from urllib import request
+import urllib.request
 
 if __name__ = "__main__":
     url = "https://alx-intranet.hbtn.io/status"
 
-    with request.urlopen(url) as response:
+    with urllib.request.urlopen(url) as response:
         body = response.read()
 
         print("Body response:")

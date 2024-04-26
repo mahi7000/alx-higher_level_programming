@@ -10,8 +10,8 @@ if __name__ == "__main__":
 
     url = "https://api.github.com/repos/"
 
-    response = requests.get(url + owner + '/' + repo + '/commits').json()
+    response = requests.get(url + owner + '/' + repo_name + '/commits').json()
 
-    if len(response) < 10:
+    if response:
         for i in range(0, len(response)):
-            print(i)
+            print(response[i])

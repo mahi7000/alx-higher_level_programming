@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """ sends POST request """
-from urllib import request, parse
+import urllib.request
+import urllib.parse
 import sys
 
 url = sys.argv[-2]
 email = sys.argv[-1]
 
-data = parse.urlencode({'email': email}).encode()
+data = urllib.parse.urlencode({'email': email}).encode()
 
-with request.urlopen(url, data=data) as response:
+with urllibrequest.urlopen(url, data=data) as response:
     body = response.read().decode('utf-8')
 
     print("Your email is: {}".format(email))

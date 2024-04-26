@@ -3,9 +3,10 @@
 import urllib.request
 import sys
 
-url = sys.argv[-1]
+if __name__ == "__main__":
+    url = sys.argv[-1]
 
-with urllib.request.urlopen(url) as response:
-    request_id = info()['X-Request-Id']
+    with urllib.request.urlopen(url) as response:
+        request_id = info()['X-Request-Id']
 
-    print(request_id)
+        print(request_id)

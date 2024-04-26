@@ -3,11 +3,14 @@
 import requests
 import sys
 
-url = sys.argv[-2]
-email = sys.argv[-1]
 
-data = {'email': email}
+if __name__ == "__main__":
+    url = sys.argv[-2]
+    email = sys.argv[-1]
 
-response = requests.post(url, data=data)
+    data = {'email': email}
 
-print("Your email is: {}".format(email))
+    response = requests.post(url, data=data)
+    body = response.text
+
+    print(body)

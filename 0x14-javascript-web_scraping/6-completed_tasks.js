@@ -6,7 +6,7 @@ const url = process.argv[2];
 
 request.get(url, { json: true }, (err, response, body) => {
   if (err) {
-	  console.error(err);
+    console.error(err);
   }
 
   const taskUser = {};
@@ -15,7 +15,7 @@ request.get(url, { json: true }, (err, response, body) => {
       if (!taskUser[todo.userId]) {
         taskUser[todo.userId] = 1;
       } else {
-	taskUser[todo.userId] += 1;
+        taskUser[todo.userId] += 1;
       }
     }
   });

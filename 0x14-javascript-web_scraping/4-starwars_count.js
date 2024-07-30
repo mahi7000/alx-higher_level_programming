@@ -14,7 +14,7 @@ request.get(url, (err, response, body) => {
       film.characters.forEach((character) => {
         if (character.includes(18)) {
           count += 1;
-	}
+        }
       });
     });
     console.log(count);

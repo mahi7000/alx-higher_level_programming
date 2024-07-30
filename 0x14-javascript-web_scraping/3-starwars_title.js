@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//print the title of Star Wars movie
+// print the title of Star Wars movie
 
 const request = require('request');
 const id = process.argv[2];
